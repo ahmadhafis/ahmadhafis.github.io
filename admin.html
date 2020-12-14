@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin</title>
+        <script type="text/javascript">
+               function cek() {
+            radioValidation();
+            if (form.porsi.value == "" || form.harga.value == "") {
+                alert("data kosong"); 
+                exit;
+            }
+        }
+        function hitung() {
+            cek(); 
+            if (form.stat.value == "member") {
+                a = eval(form.porsi.value); 
+                b = eval(form.harga.value); 
+                c = a * b; 
+                var diskon = c * 5 / 100;
+                form.total.value = c - diskon; 
+            }
+            else {
+                a = eval(form.porsi.value); 
+                b = eval(form.harga.value); 
+                c = a * b 
+                form.total.value = c;
+            }
+        }
+        function radioValidation() {
+
+            var stat = document.getElementsByName('stat');
+            var statValue = false;
+
+            for (var i = 0; i < stat.length; i++) {
+                if (stat[i].checked == true) {
+                    statValue = true;
+                }
+            }
+            if (!statValue) {
+                alert("Please Choose the Status");
+                return false;
+            }
+
+        }
+        </script>
+    </head>
+    <link rel="stylesheet" href="admincss.css">
+    <body>
+        <header>
+            <div class="jumbotron">
+            <h1>Profil Restoran</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="datadiri.html">Data Diri</a></li>
+                    <li><a href="profilrm.html">Profil Restoran</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </header>
+
+            <main>
+                <form>
+                    <label for="idpembeli">ID Pembeli:</label><br>
+                    <input type="text" id="idpembeli" name="idpembeli"><br>
+                    <label for="nama">Nama Pembeli:</label><br>
+                    <input type="text" id="nama" name="nama">
+                    <br><br><br>
+                    <p>Status Pembeli</p>
+                    <input type="radio" id="member" name="membership" value="member">
+                    <label for="member">Member</label><br>
+                    <input type="radio" id="non-member" name="membership" value="non-member">
+                    <label for="non-member">Non-Member</label><br>
+                    <br><br><br>
+                    <p>Nama Makanan : </p>
+                    <input type="text" id="makanan" name="jenis" value=" "><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </main>
+            <br><br><br>
+
+            <div class="kembali">
+                <a href="home.html">Kembali </a>
+                </div>
+    </body>
+</html>
+<!-- Ahmad Hafis -->
+<!-- TI 2F -->

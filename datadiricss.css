@@ -1,0 +1,48 @@
+.jumbotron{
+    font-size: 20px;
+    padding: 60px;
+    background-color: #00c8eb;
+    text-align: center;
+    color: white;
+}
+nav li{
+    display: inline;
+    list-style-type: none;
+    margin-right: 20px;
+}
+nav{
+    background-color: #00a2c6;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+}
+nav a{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+body{
+    font-family: sans-serif;
+    background-color: whitesmoke;
+    
+}
+h3{
+    color: rgb(20, 155, 148);
+   
+}
+div a{
+    color: rgb(196, 112, 9);
+}
+.biodata{
+    order: 2;
+    padding: 30px;
+    display: flex;
+    border: 5px solid #00c8eb;
+}
+.biodata img{
+    width: 100px;
+    border-radius: 5px;
+    
+}
+
